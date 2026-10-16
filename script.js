@@ -73,9 +73,13 @@ function botaoDeComecar() {
 function botaoDeInstrucoes() {
     obterDados().then(dados => {
         const mensagem = dados["instrucoes"];
+        const botaoDeVoltar = dados["botao_de_voltar"];
 
         botao_instrucoes.setAttribute("hidden", true);
         botao_comecar.setAttribute("hidden", true);
+        
+        botaorecomecar.removeAttribute("hidden")
+        botaorecomecar.innerHTML = botaoDeVoltar[1];
         
         h4.removeAttribute("hidden");
         h4.innerHTML = mensagem;
@@ -125,6 +129,7 @@ function recomecar() {
 
     h2.setAttribute("hidden", true);
     final.setAttribute("hidden", true);
+    h4.setAttribute("hidden", true);
     
     fase = 0;
     carregarConteudo();
@@ -140,7 +145,11 @@ function telaDeRecomeco() {
     const erros = localStorage.getItem('erros');
     h2.innerHTML = "Erros: " + erros;
 
-    botaorecomecar.removeAttribute("hidden");
+    obterDados().then(dados => {
+        const botaoDeVoltar = dados["botao_de_voltar"];
+        botaorecomecar.removeAttribute("hidden");
+        botaorecomecar.innerHTML = botaoDeVoltar[0];
+})
 }
 
 function telaDeFinal() {
