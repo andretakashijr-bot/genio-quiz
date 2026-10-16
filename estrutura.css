@@ -12,15 +12,53 @@ button {
         width: 30%;
         height: 12%;
         border-width: 3pt;
-}
+    }
+    #botao-comecar {
+    position: fixed;
+    bottom: 60%;
+    right: 35%;
+    left: 35%;
+    }
+
+    #recomecar { 
+    position: fixed;
+    bottom: 20%;
+    right: 35%;
+    left: 35%;
+    }
+    #botao-instrucoes {
+    position: fixed;
+    bottom: 40%;
+    right: 35%;
+    left: 35%;
+    }
 }
   /* Para telas médias (Tablets) */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     button {
-        width: 23%;
+        width: 24%;
         height: 12%;
         border-width: 4pt;
-}
+    }
+    #botao-comecar {
+    position: fixed;
+    bottom: 60%;
+    right: 38%;
+    left: 38%;
+    }
+
+    #recomecar { 
+    position: fixed;
+    bottom: 20%;
+    right: 38%;
+    left: 38%;
+    }
+    #botao-instrucoes {
+    position: fixed;
+    bottom: 40%;
+    right: 38%;
+    left: 38%;
+    }
 }
   /* Para telas grandes (Computadores/Televisões) */
 @media screen and (min-width: 1025px) {
@@ -28,6 +66,25 @@ button {
         width: 20%;
         height: 12%;
         border-width: 5pt;
+    }
+    #botao-comecar {
+    position: fixed;
+    bottom: 60%;
+    right: 40%;
+    left: 40%;
+    }
+
+    #recomecar { 
+    position: fixed;
+    bottom: 20%;
+    right: 40%;
+    left: 40%;
+    }
+    #botao-instrucoes {
+    position: fixed;
+    bottom: 40%;
+    right: 40%;
+    left: 40%;
     }
 }
 
@@ -55,20 +112,6 @@ p {
     font-weight: 100%;
     font-size: 140%;
     text-align: center;
-}
-
-#botao-comecar {
-    position: fixed;
-    bottom: 60%;
-    right: 40%;
-    left: 40%;
-}
-
-#recomecar { 
-    position: fixed;
-    bottom: 20%;
-    right: 40%;
-    left: 40%;
 }
 
 #opcao1 {
